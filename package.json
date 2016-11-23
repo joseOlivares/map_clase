@@ -1,5 +1,5 @@
 {
-	"name":"map_clase",
+	"name":"mapajl",
 	"version": "1.0.0",
 	"description":"Ejemplo del uso de Gmaps",
 	"dependencies":{
