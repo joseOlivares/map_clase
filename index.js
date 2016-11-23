@@ -4,14 +4,14 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 
-app.use(express.static(__dirname + '/public')); //serving statics files like css, js, images
+app.use(express.static(__dirname + '/public')); //sirviendo archivos estaticos como  css, js, images
 
-var port=process.env.PORT || 3000; //this is for heroku
+var port=process.env.PORT || 3000; //definiendo el puerto para heroku
 
 app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
-    console.log('Pidiendo archivo');
 }); 
+
 //aqui estaba el error
 http.listen(port, function(){
   console.log('listening on *:'+port);
