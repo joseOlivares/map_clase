@@ -9,7 +9,5 @@ app.use(express.static(__dirname + '/public')); //serving statics files like css
 var port=process.env.PORT || 3000; //this is for heroku
 
 app.get('/', function(req, res){
-
-  res.sendFile(__dirname + '/index.html');
-
+  res.sendFile(__dirname + '/index.htm');
 });
