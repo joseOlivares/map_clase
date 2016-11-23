@@ -9,6 +9,10 @@ app.use(express.static(__dirname + '/public')); //serving statics files like css
 var port=process.env.PORT || 3000; //this is for heroku
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + 'index.html');
+    res.sendFile(__dirname + '/index.html');
     console.log('Pidiendo archivo');
 }); 
+//aqui estaba el error
+http.listen(port, function(){
+  console.log('listening on *:'+port);
+});
