@@ -25,11 +25,12 @@ io.on('connection',function(socket){
 		socketCount++;
 		//emitiendo mensaje a TODOS los socketsno usuarios conetados
 		io.sockets.emit('usuario conectado',socketCount);
+
+		socket.on('disconnect',function(){
+			socketCount--;//decremento del contador
+			console.log('Usuario Desconectado');//menaje en consola
+			io.sockets.emit('usuario desconectado',socketCount);//mensaje a todos los sockets
+		});
+		
 });//cierra conexion
 
-
-io.on('disconnect',function(){
-	socketCount--;//decremento del contador
-	console.log('Usuario Desconectado');//menaje en consola
-	io.sockets.emit('usuario desconectado',socketCount);//mensaje a todos los sockets
-});
