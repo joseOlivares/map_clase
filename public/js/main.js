@@ -97,8 +97,9 @@ var app={
     inicializar: function() {
 		"use strict";
 		var self=this;
+	self.listenSocket(); //activando el socket    
         self.cargarMapa(); //llamando metodo que carga el mapa
-        self.listenSocket(); //activando el socket
+        
 	}
 
 };
