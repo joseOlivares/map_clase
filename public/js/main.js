@@ -90,6 +90,10 @@ var app={
           socket.on('usuario conectado',function(contador){
               $('#divContador').html(contador);//cargando datos en el div
           });
+	      
+	  socket.on('usuario desconectado',function(conta){
+	  	 $('#divContador').html(conta);//cargando datos en el div
+	  });    
 
       },
 
