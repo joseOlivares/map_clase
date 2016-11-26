@@ -31,5 +31,5 @@ io.on('connection',function(socket){
 io.on('disconnect',function(){
 	socketCount--;//decremento del contador
 	console.log('Usuario Desconectado');//menaje en consola
-	io.sockets.emit('usuario desconectado');//mensaje a todos los sockets
+	io.sockets.emit('usuario desconectado',socketCount);//mensaje a todos los sockets
 });
