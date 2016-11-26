@@ -12,7 +12,4 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 }); 
 
-//aqui estaba el error
-http.listen(port, function(){
-  console.log('listening on *:'+port);
-});
+
