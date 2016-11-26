@@ -12,4 +12,6 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html');
 }); 
 
-
+http.listen(port,function(){
+    console.log('Escuchando en el puerto: '+port);//mensaje en consola 
+});
