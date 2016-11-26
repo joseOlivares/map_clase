@@ -19,7 +19,7 @@ http.listen(port,function(){
 
 
 var socketCount=0;//contador de conexiones al server
-/*
+
 io.on('connection',function(socket){
 		console.log('Usuario conectado...');
 		socketCount++;
@@ -31,4 +31,4 @@ socket.on('disconnect',function(){
 	socketCount--;//decremento del contador
 	console.log('Usuario Desconectado');//menaje en consola
 	io.sockets.emit('usuario desconectado');//mensaje a todos los sockets
-});*/
+});
